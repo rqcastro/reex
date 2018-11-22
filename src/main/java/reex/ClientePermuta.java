@@ -1,12 +1,12 @@
 package reex;
 
-import org.hibernate.procedure.spi.ParameterRegistrationImplementor;
-import org.omg.PortableInterceptor.INACTIVE;
+import org.springframework.web.context.support.HttpRequestHandlerServlet;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.servlet.http.HttpServletRequest;
 
 @Entity // tells hibernate to make a table out of this class
 public class ClientePermuta {
@@ -18,7 +18,8 @@ public class ClientePermuta {
     private String nome;
     private String email;
     private String celular;
-    private String otherinfo;
+    private String endereco;
+    private String machineIP;
 
     public Integer getId(){
         return id;
@@ -52,12 +53,19 @@ public class ClientePermuta {
         this.email = email;
     }
 
-    public String getOtherinfo() {
-        return otherinfo;
+    public String getEndereco() {
+        return endereco;
     }
 
-    public void setOtherinfo(String otherinfo) {
-        this.otherinfo = otherinfo;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 
+    public String getMachineIP() {
+        return machineIP;
+    }
+
+    public void setMachineIP(String machineIP) {
+        this.machineIP = machineIP;
+    }
 }
