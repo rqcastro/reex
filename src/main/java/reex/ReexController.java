@@ -2,11 +2,12 @@ package reex;
 
 import java.util.concurrent.atomic.AtomicLong;
 
+import org.omg.PortableInterceptor.INACTIVE;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import javax.servlet.http.HttpServletRequest;
+
 
 @RestController
 @Controller //This means that class is a Controller
@@ -21,6 +22,13 @@ public class ReexController {
     @Autowired
     private CorretorRepository corretorRepository;
 
+    @Autowired
+    private PerfilImovelRepository perfilimovelRepository;
+
+    @Autowired
+    private CorretorDetalheRepository corretorDetalheRepository;
+
+
     /**
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
@@ -32,46 +40,108 @@ public class ReexController {
     }
     **/
 
-    @GetMapping(path="/addCliente") //Map only GET requests
-    public @ResponseBody String addNewClientePermuta (@RequestParam String nomecliente,
-                                                      @RequestParam String emailcliente,
-                                                      @RequestParam String celularcliente,
-                                                      @RequestParam String enderecoimovel,
+    @GetMapping(path="/addCliCompra") //Map only GET requests
+    public @ResponseBody String addNewClienteCompra (@RequestParam String nomeclienteC,
+                                                      @RequestParam String emailclienteC,
+                                                      @RequestParam String celularclienteC,
                                                       HttpServletRequest request) {
         //@ResponseBody means the returned String is the response, not a view name
         //@RequestParam means it is a parameter from the GET or POST request
 
-        ClientePermuta cliente = new ClientePermuta();
-        cliente.setNome(nomecliente);
-        cliente.setEmail(emailcliente);
-        cliente.setCelular(celularcliente);
-        cliente.setEndereco(enderecoimovel);
-        cliente.setMachineIP((request.getHeader("X-Forwarded-For") != null) ? request.getHeader("X-Forwarded-For") : request.getRemoteAddr());
-        clientepermutaRepository.save(cliente);
-        return "Gravado";
+        ClientePermuta clienteCompra = new ClientePermuta();
+        clienteCompra.setNome(nomeclienteC);
+        clienteCompra.setEmail(emailclienteC);
+        clienteCompra.setCelular(celularclienteC);
+        clienteCompra.setMachineIP((request.getHeader("X-Forwarded-For") != null) ? request.getHeader("X-Forwarded-For") : request.getRemoteAddr());
+        clienteCompra.setCompraOuVenda("Compra");
+        clientepermutaRepository.save(clienteCompra);
+        return "1";
 
     }
 
-    @PostMapping(path = "/add")
-    public @ResponseBody String addNewClientePermuta (@RequestBody ClientePermuta novoCliente) {
+    @GetMapping(path="/addCliVenda") //Map only GET requests
+    public @ResponseBody String addNewClienteVenda (@RequestParam String nomeclienteV,
+                                                     @RequestParam String emailclienteV,
+                                                     @RequestParam String celularclienteV,
+                                                     HttpServletRequest request) {
         //@ResponseBody means the returned String is the response, not a view name
         //@RequestParam means it is a parameter from the GET or POST request
 
-        clientepermutaRepository.save(novoCliente);
-        return "Gravado";
+        ClientePermuta clienteVenda = new ClientePermuta();
+        clienteVenda.setNome(nomeclienteV);
+        clienteVenda.setEmail(emailclienteV);
+        clienteVenda.setCelular(celularclienteV);
+        clienteVenda.setMachineIP((request.getHeader("X-Forwarded-For") != null) ? request.getHeader("X-Forwarded-For") : request.getRemoteAddr());
+        clienteVenda.setCompraOuVenda("Venda");
+        clientepermutaRepository.save(clienteVenda);
+        return "2";
 
     }
 
-    /*
-    @GetMapping(path = "/all")
-    public @ResponseBody Iterable<ClientePermuta> getAllClientesPermuta(){
-        //This returns a JSON or XML with all clients
-        return clientepermutaRepository.findAll();
+
+    @GetMapping(path = "/addImCompra")
+    public @ResponseBody String addNewPerfilImovel (@RequestParam String tipoImovel,
+                                                    @RequestParam String outroImovel,
+                                                    @RequestParam String cidade,
+                                                    @RequestParam String bairro,
+                                                    @RequestParam String metragem,
+                                                    @RequestParam String dormitorios,
+                                                    @RequestParam String vagas,
+                                                    @RequestParam String valorImovel,
+                                                    @RequestParam String financiamento,
+                                                    HttpServletRequest request){
+        PerfilImovel imovel = new PerfilImovel();
+        imovel.setTipoImovel(tipoImovel);
+        imovel.setOutroImovel(outroImovel);
+        imovel.setCidade(cidade);
+        imovel.setBairro(bairro);
+        imovel.setMetragem(metragem);
+        imovel.setDormitorios(dormitorios);
+        imovel.setVagas(vagas);
+        imovel.setValorImovel(valorImovel);
+        imovel.setFinaciamento(financiamento);
+        imovel.setMachineIP((request.getHeader("X-Forwarded-For") != null) ? request.getHeader("X-Forwarded-For") : request.getRemoteAddr());
+        imovel.setCompraOuVenda("Compra");
+        imovel.setQuerComprar("N/A");
+        imovel.setQuerPermuta("N/A");
+        perfilimovelRepository.save(imovel);
+
+        return "3";
     }
-    */
 
+    @GetMapping(path = "/addImVenda")
+    public @ResponseBody String addNewPerfilImovelVenda (@RequestParam String tipoImovelV,
+                                                    @RequestParam String outroImovelV,
+                                                    @RequestParam String cidadeV,
+                                                    @RequestParam String bairroV,
+                                                    @RequestParam String metragemV,
+                                                    @RequestParam String dormitoriosV,
+                                                    @RequestParam String vagasV,
+                                                    @RequestParam String valorImovelV,
+                                                    @RequestParam String financiamentoV,
+                                                    @RequestParam String querComprarV,
+                                                    @RequestParam String querPermutaV,
+                                                    HttpServletRequest request){
+        PerfilImovel imovel = new PerfilImovel();
+        imovel.setTipoImovel(tipoImovelV);
+        imovel.setOutroImovel(outroImovelV);
+        imovel.setCidade(cidadeV);
+        imovel.setBairro(bairroV);
+        imovel.setMetragem(metragemV);
+        imovel.setDormitorios(dormitoriosV);
+        imovel.setVagas(vagasV);
+        imovel.setValorImovel(valorImovelV);
+        imovel.setFinaciamento(financiamentoV);
+        imovel.setMachineIP((request.getHeader("X-Forwarded-For") != null) ? request.getHeader("X-Forwarded-For") : request.getRemoteAddr());
+        imovel.setCompraOuVenda("Venda");
+        imovel.setQuerComprar(querComprarV);
+        imovel.setQuerPermuta(querPermutaV);
+        perfilimovelRepository.save(imovel);
 
-    @GetMapping(path = "/addBroker")
+        return "4";
+    }
+
+    @GetMapping(path = "/addCor")
     public @ResponseBody String addBroker(@RequestParam String nomecorretor,
                                           @RequestParam String emailcorretor,
                                           @RequestParam String celularcorretor,
@@ -84,9 +154,37 @@ public class ReexController {
         corr.setCreci(creci);
         corr.setMachineIP((request.getHeader("X-Forwarded-For") != null) ? request.getHeader("X-Forwarded-For") : request.getRemoteAddr());
         corretorRepository.save(corr);
-        return "Broker Gravado";
+        return "6";
 
     }
+
+    @GetMapping(path = "/addCorDet")
+    public @ResponseBody String addBrokerDetalhe(@RequestParam String especialidade,
+                                                 @RequestParam String outraEspecialidade,
+                                                 @RequestParam String cidadeEspecialidade,
+                                                 @RequestParam String bairroEspecialidade,
+                                                 HttpServletRequest request){
+
+        CorretorDetalhe corretorDetalhe = new CorretorDetalhe();
+        corretorDetalhe.setEspecialidade(especialidade);
+        corretorDetalhe.setOutraEspecialidade(outraEspecialidade);
+        corretorDetalhe.setCidade(cidadeEspecialidade);
+        corretorDetalhe.setBairro(bairroEspecialidade);
+        corretorDetalhe.setMachineIP((request.getHeader("X-Forwarded-For") != null) ? request.getHeader("X-Forwarded-For"):request.getRemoteAddr());
+        corretorDetalheRepository.save(corretorDetalhe);
+
+        return "5";
+    }
+    /*
+    @GetMapping(path = "/all")
+    public @ResponseBody Iterable<ClientePermuta> getAllClientesPermuta(){
+        //This returns a JSON or XML with all clients
+        return clientepermutaRepository.findAll();
+    }
+    */
+
+
+
     /*
     @GetMapping(path = "/allBrokers")
     public @ResponseBody Iterable<Corretor> getAllBrokers(){
