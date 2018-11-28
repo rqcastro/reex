@@ -118,7 +118,6 @@ public class ReexController {
                                                     @RequestParam String dormitoriosV,
                                                     @RequestParam String vagasV,
                                                     @RequestParam String valorImovelV,
-                                                    @RequestParam String financiamentoV,
                                                     @RequestParam String querComprarV,
                                                     @RequestParam String querPermutaV,
                                                     HttpServletRequest request){
@@ -131,7 +130,7 @@ public class ReexController {
         imovel.setDormitorios(dormitoriosV);
         imovel.setVagas(vagasV);
         imovel.setValorImovel(valorImovelV);
-        imovel.setFinaciamento(financiamentoV);
+        imovel.setFinaciamento("N/A");
         imovel.setMachineIP((request.getHeader("X-Forwarded-For") != null) ? request.getHeader("X-Forwarded-For") : request.getRemoteAddr());
         imovel.setCompraOuVenda("Venda");
         imovel.setQuerComprar(querComprarV);
