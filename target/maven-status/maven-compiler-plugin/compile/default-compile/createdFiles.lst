@@ -1,0 +1,11 @@
+reex\ReexController.class
+reex\CorretorRepository.class
+reex\Reex.class
+reex\ClientePermuta.class
+reex\Corretor.class
+reex\CorretorDetalheRepository.class
+reex\PerfilImovelRepository.class
+reex\ClientePermutaRepository.class
+reex\Application.class
+reex\CorretorDetalhe.class
+reex\PerfilImovel.class
