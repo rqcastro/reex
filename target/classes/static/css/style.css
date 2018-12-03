@@ -1272,6 +1272,10 @@ p span {
 	color: #674594 !important;
 }
 
+.txt-black {
+    color: #000;
+}
+
 .txt-square {
 	color: #181818;
 	font-size: 9px;
@@ -1520,6 +1524,12 @@ p span {
 
 .bg-violet3 {
 	background-color: #260446;
+}
+
+.bg-rosa1 {
+    background-color: #960a96;
+    opacity: 0.95;
+    filter: alpha(opacity=95); /* For IE8 and earlier */
 }
 
 .overlay-dark:before,
@@ -2321,12 +2331,25 @@ p span {
 .btn-dark,
 .btn-dark:focus {
 	/*background: #181818;*/
-	color: #562087;
-	border: 1px solid #562087;
+	color: #000;
+	border: 1px solid #000;
 	margin-top: 10px;
 }
 
 .btn-dark:hover {
+	background-color: #562087;
+	color: #fff;
+	border: 1px solid #562087;
+}
+
+.btn-light-1,
+.btn-light-1:focus {
+	background: transparent;
+	color: #fff;
+	border: 1px solid #fff;
+}
+
+.btn-light-1:hover {
 	background-color: #562087;
 	color: #fff;
 	border: 1px solid #562087;
@@ -2364,17 +2387,17 @@ p span {
 }
 
 .btn-light,
-.btn-light:focus {
-	background: transparent;
-	color: #fff;
-	border: 1px solid #fff;
-}
+ .btn-light:focus {
+ 	background: transparent;
+ 	color: #fff;
+ 	border: 1px solid #fff;
+ }
 
-.btn-light:hover {
-	background: #2bc1c7;
-	color: #fff;
-	border: 1px solid #2bc1c7;
-}
+ .btn-light:hover {
+ 	background: #2bc1c7;
+ 	color: #fff;
+ 	border: 1px solid #2bc1c7;
+ }
 
 .btn-gray,
 .btn-gray:focus {
@@ -2502,6 +2525,22 @@ p span {
  color: #ffffff;
  background-color: #222222;
 }
+
+
+.btn-black,
+.btn-black:focus {
+	background: transparent;
+	color: #000;
+	border: 1px solid #000;
+}
+
+.btn-black:hover {
+	background: #2bc1c7;
+	color: #fff;
+	border: 1px solid #2bc1c7;
+}
+
+
 
 /*==========================================
 			     Navbar
@@ -8389,10 +8428,14 @@ ul.countdown li p {
         padding-left: 14px;
 }
 
+/*
 .call-box-2-info-home:hover {
-	background-color: #6b3e95;
+	/*background-color: #6b3e95;*/
+	background-color: #960a96;
+    filter: alpha(opacity=95); /* For IE8 and earlier */
+    opacity: 0.95;
 }
-
+*/
 .clients-2.grid-20 li {
 	width: 20%;
 }
@@ -9701,7 +9744,11 @@ ul.countdown li p {
 	letter-spacing: 1px;
 	/*background-color: #d7fffbc7;
 	background-color: #2bc1c7;*/
+	background-color: #960a96;
+	filter: alpha(opacity=95); /* For IE8 and earlier */
+	opacity: 0.95;
 	margin-top: 35px;
+
 }
 
 .call-box-1 h2 {
@@ -9813,8 +9860,11 @@ ul.countdown li p {
 }
 
 .call-box-2-info-home {
-	background-color: #9b0a7e;
-        height: 100%;
+	/*background-color: #9b0a7e;*/
+    height: 100%;
+    background-color: #960a96;
+    filter: alpha(opacity=95); /* For IE8 and earlier */
+    opacity: 0.95;
 }
 
 .call-box-2-info:hover {
@@ -9822,7 +9872,10 @@ ul.countdown li p {
 }
 
 .call-box-2-info-home:hover {
-	background-color: #9b0a7e;
+	/*background-color: #9b0a7e;*/
+	    background-color: #960a96;
+        filter: alpha(opacity=95); /* For IE8 and earlier */
+        opacity: 0.95;
 }
 
 /* Promo Box 3 */
@@ -10891,6 +10944,8 @@ ul.filter > li > span {
 .contact-form-3 .form-control:focus,
 .contact-form-4 .form-control,
 .contact-form-4 .form-control:focus,
+.contact-form-5 .form-control,
+.contact-form-5 .form-control:focus,
 .newsletter-1 .form-control,
 .newsletter-1 .form-control:focus,
 .modal-full-body-form .form-control,
@@ -10907,6 +10962,35 @@ ul.filter > li > span {
 	-o-transition: border-color ease-in-out .35s, box-shadow ease-in-out .35s;
 	transition: border-color ease-in-out .35s, box-shadow ease-in-out .35s;
 }
+
+/*Renato 03/12/2018 */
+.myplaceholder::-webkit-input-placeholder{
+    color: #000 !important;
+}
+
+.myplaceholder::-placeholder{
+    color: #000 !important;
+    opacity: 1;
+}
+
+.myplaceholder::-ms-input-placeholder{
+    color: #000 !important;
+}
+
+.myplaceholder::-moz-placeholder{
+    color: #000 !important;
+}
+
+.myplaceholder:-ms-input-placeholder{
+    color: #000 !important;
+}
+
+.myplaceholder:-moz-placeholder{
+    color: #000 !important;
+}
+
+
+
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #FFF !important;
     opacity: 1; /* Firefox */
@@ -10977,6 +11061,7 @@ ul.filter > li > span {
 .contact-form-1 .form-control,
 .contact-form-1 .form-control:focus {
 	border-color: #fff;
+	/*border-color: #000; */
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
@@ -11293,6 +11378,209 @@ ul.filter > li > span {
 	margin-right: auto;
 	width: 100%;
 }
+
+
+/* Created by Renato Castro 03/12/2018*/
+
+.contact-form-5 .form-group {
+	margin-bottom: 0;
+}
+
+.contact-form-5 .form-control {
+	border-radius: 1px;
+	background-color: transparent;
+	color: #FFFFFF;
+}
+
+.contact-form-5 .form-control,
+.contact-form-5 .form-control:focus {
+	border-color: #000;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.contact-form-5 .has-error .form-control {
+	color: #FF4245;
+}
+.contact-form-5 .has-error .form-control::-moz-placeholder {
+ color: #FF4245;
+ opacity: 1;
+}
+.contact-form-5 .has-error .form-control:-ms-input-placeholder {
+ color: #FF4245;
+ opacity: 1;
+}
+.contact-form-5 .has-error .form-control::-webkit-input-placeholder {
+ color: #FF4245;
+ opacity: 1;
+}
+
+
+
+.contact-form-5 input {
+	height: 65px;
+}
+
+.contact-form-5 .first-name {
+	border-bottom: 0px solid transparent;
+}
+
+.contact-form-5 .last-name {
+	border-bottom: 0px solid transparent;
+	border-left: 0px solid transparent;
+}
+
+.contact-form-5 .email {
+	border-right: 0px solid transparent;
+	border-bottom: 0px solid transparent;
+}
+
+.contact-form-5 .subject {
+	border-left: 0px solid transparent;
+}
+.contact-form-5 .subject1 {
+	border-left: 0px solid transparent;
+	border-top: 0px solid transparent;
+}
+.contact-form-5 .subject2 {
+	border-top: 0px solid transparent;
+}
+
+.contact-form-5 textarea.form-control {
+	height: 140px;
+	border-top: 0px solid transparent;
+	padding-top: 20px;
+}
+.contact-form-5 textarea.form-control1 {
+	border-left: 0px solid transparent;
+}
+.contact-form-5 .endereco {
+	border-bottom: 0px solid transparent;
+}
+
+.contact-form-5 fieldset{
+	border: 1px solid #000;
+	padding: 10px;
+}
+
+.contact-form-5 .radio input[type=radio], .contact-form-5 .radio input[type=checkbox]{
+    display:none; /* Esconde os inputs */
+	border-color: #000;
+	border: 1px solid #000;
+}
+
+.contact-form-5 .radio label {
+    cursor: pointer;
+}
+.contact-form-5 .radio input[type="radio"] + label:before, .contact-form-5 .radio input[type="checkbox"] + label:before {
+    border-color: #000;
+	border: 1px solid #000;
+    content: "\00a0";
+    display: inline-block;
+    font: 16px/1em sans-serif;
+    height: 16px;
+    margin: 0 .25em 0 0;
+    padding:0;
+    vertical-align: top;
+    width: 16px;
+    border-radius:0px;
+}
+
+.contact-form-5 .radio input[type="radio"]:checked + label:before, .contact-form-5 .radio input[type="checkbox"]:checked + label:before {
+    background: none;
+    color: #000;
+    content: "\2716";
+    text-align: center;
+}
+
+.contact-form-5 .radio input[type="radio"]:checked + label:after, .contact-form-5 .radio input[type="checkbox"]:checked + label:after {
+    font-weight: bold;
+}
+.contact-form-5 legend {
+	float: left;
+    display: block;
+    width: 100%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+    padding: 0px;
+	padding-top: 0px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+    font-size: 14px;
+    line-height: inherit;
+    color: #000;
+    border-bottom: 0px solid transparent;
+}
+
+.contact-form-5 button {
+	font-size: 30px;
+	height: 140px;
+	border: 1px solid #fff;
+	border-left: 0px solid transparent;
+	border-top: 0px solid transparent;
+	background-color: transparent;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+.contact-form-5 button:hover {
+
+	background-color: #646464;
+	color: #fff;
+	border: 1px solid #646464;
+
+    /*color: #BF9865;
+	background-color: rgba(84, 232, 238, 1.0);
+	border-top: 1px solid #fff;
+	*/
+
+	/*opacity: 0.8;*/
+}
+
+.contact-form-5 .button1 {
+	font-size: 30px;
+	height: 140px;
+	border: 1px solid #fff;
+	border-top: 0px solid transparent;
+	background-color: transparent;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+.contact-form-5 .button2 {
+	font-size: 16px;
+	font-weight: 700;
+	height: 60px;
+	text-transform: uppercase;
+}
+.contact-form-5 .button3 {
+	border-top: 1px solid;
+}
+.contact-form-5 .button4 {
+	border-top: 1px solid;
+	border-left: 0px solid transparent;
+}
+
+/*Created by Renato Castro - 27-Nov-2018*/
+.contact-form-5 .button5 {
+    font-size: 16px;
+    font-weight: 700;
+    height: 60px;
+    text-transform: uppercase;
+    background-color: #633B8C;
+    border: 1px solid #3E3E3E;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
 
 /* Newsletters */
 

@@ -158,7 +158,11 @@
 .reex_062_slide > h1{
  color: #ffffff;
  /*margin: 20px 0;*/
- padding: 20px 0;
+ /*padding: 20px 0;*/
+ padding-top: 20px;
+ padding-left: 5px;
+ padding-bottom: 20px;
+ padding-right: 5px;
  font-size: 50px;
  font-weight: 700;
  text-shadow: none;

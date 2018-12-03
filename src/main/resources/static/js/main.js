@@ -659,6 +659,7 @@
 
                     $('#form-contato-imovel')[0].reset();
                     $('#form-contato-imovel')[0].style.display = "none";
+                    $('#section-contato-compra')[0].style.display = "none";
                     $('#modal-default-message-modal').modal("toggle");
 
                
@@ -739,6 +740,7 @@
                     $('#form-imovel-venda')[0].reset();
                     $('#form-imovel-venda')[0].style.display = "none";
                     $('#modal-default-message-modal').modal("toggle");
+                    $('#section-contato-venda')[0].style.display = "none";
 
 
                   },
@@ -813,6 +815,7 @@
 
                      $('#form-corretor-detalhe')[0].reset();
                      $('#form-corretor-detalhe')[0].style.display = "none";
+                     $('#section-contato-corretor')[0].style.display = "none";
                      $('#modal-default-message-modal').modal("toggle");
 
 

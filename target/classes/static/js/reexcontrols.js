@@ -1,11 +1,15 @@
 // JavaScript source code
 function showFormContatoCompra(){
-			var x = document.getElementById("form-contato-compra");			
+			var x = document.getElementById("form-contato-compra");
+            var y = document.getElementById("section-contato-compra");
+
 			if (x.style.display == "none"){
+			    y.style.display = "block";
 				x.style.display = "block";
 				window.location.href = "#form-comprar";
 			}else{
 				x.style.display = "none";
+				y.style.display = "none";
 			}
 		}
 
@@ -21,16 +25,20 @@ function showFormContatoCompraImovel(){
 
 function showFormContatoVenda(){
 			var x = document.getElementById("form-contato-venda");
+			var y = document.getElementById("section-contato-venda");
 			if (x.style.display == "none"){
+			    y.style.display = "block";
 				x.style.display = "block";
 				window.location.href = "#form-vender";
 			}else{
 				x.style.display = "none";
+				y.style.display = "none";
 			}
 		}
 
 function showFormContatoVendaImovel(){
 			var y = document.getElementById("form-imovel-venda");
+
 			if (y.style.display == "none"){
 				y.style.display = "block";
 				window.location.href = "#form-imovel-venda";
@@ -42,11 +50,14 @@ function showFormContatoVendaImovel(){
 
 function showFormContatoCorretor(){
 			var x = document.getElementById("form-contato-corretor");
+			var y = document.getElementById("section-contato-corretor")
 			if (x.style.display == "none"){
+			    y.style.display = "block";
 				x.style.display = "block";
 				window.location.href = "#form-corretor";
 			}else{
 				x.style.display = "none";
+				y.style.display = "none";
 			}
 		}
 

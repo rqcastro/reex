@@ -32,14 +32,36 @@
 	 <meta name="google-site-verification" content="TCy2vRGlq1JI5Z_9AmLvCGnHWntJP2E7b4f6g8YZKoI" />
      <meta name="description=" content="Compre um imóvel com a REEX e use seu como parte do pagamento.">
      <meta name="description=" content="Querendo trocar seu imóvel? Na REEX você utiliza seu imóvel como forma de pagamento.">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="keywords" content="comprar,vender,trocar,imovel, imóvel, casa, apartamento, permuta, compra, venda">
 
 
-	 
-    
-   </head>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '194601048141282');
+          fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=194601048141282&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+
+
+</head>
    
    <body>
-      <!-- Preloader -->
+   <script>fbq('track', 'ViewContent');</script>
+
+   <!-- Preloader -->
       <div class="loader-wrap" style="text-align: center">
 		 <div style="text-align: center"><p><img src="img/logo-reex-white.png" width="80" alt="reex"/></p></div><br style="clear: both">
          <div class="spinner">
@@ -462,9 +484,9 @@
       <!--*-*-*-*-*-*-*-*-*-*- End Header Section *-*-*-*-*-*-*-*-*-*-->
       
         <div class="theme-reex">
-         <section class="bg-magenta">
-			<div class="container">
-				<div class="row">
+         <section class="bg-rosa1">
+			<div class="container bg-rosa1">
+				<div class="row bg-rosa1">
                      <div class="col-sm-12 call-box-2-info-home">
                          <div class="call-box-1" style="margin-top:20px; margin-bottom: 20px;">
                              <h4><strong>COMPRANDO IMÓVEL EM <br>UM BANCO CONVENIADO?</strong></h4>Com a REEX você pode utilizar seu imóvel<br> como parte do pagamento.<br>
@@ -501,7 +523,7 @@
         </section><a id="comprar"></a>
 	
 	
-		<section class="pad-t-100 pad-b-50 pad-section-50 bg-magenta">
+		<section class="pad-t-100 pad-b-50 pad-section-50 bg-rosa1">
 			<div class="container">
 			   <div class="row">
 				  <div class="col-md-7 pad-b-60 wow fadeIn" data-wow-delay="0.2s">
@@ -523,12 +545,12 @@
 			</div>
 	   </section>
        <a id="form-comprar"></a>
-	   <section class="cover-bg overlay-dark txt-light">
+	   <section id="section-contato-compra" class="cover-bg txt-light bg-rosa1" style="display: none;" >
             <div class="pad-t-60 pad-b-60 pad-section-50"><br><br>
                <div class="container">
                   <div class="row v-align">
                      <div class="col-md-10">
-                        <form id="form-contato-compra" class="contact-form-1"  style= "display: none;">
+                        <form id="form-contato-compra" class="contact-form-1" style="display: none;" >
 						   <h4 class="heading-des">Preencha o formulário abaixo</h4><br><br>
                            <div class="col-sm-12 no-pad">
                               <div class="messages"></div>
@@ -659,15 +681,15 @@
 				 <p class="txt-16 txt-light">Cadastre-se agora e seja um dos primeiros a conhecer!</p>
 				 <p class="txt-16 fw-600 txt-light">FICOU INTERESSADO?</p>
 				 <div>
-                     <a href="javascript:void(0);" onclick="showFormContatoVenda();" data-toggle="modal" class="btn btn-s btn-light" id="contato-venda">SIM, QUERO ME CADASTRAR!</a>
+                     <a href="#" onclick="showFormContatoVenda();" data-toggle="modal" class="btn btn-s btn-light-1" id="contato-venda">SIM, QUERO ME CADASTRAR!</a>
 				 </div>
 			  </div>
 		   </div>
 		</div>
 	 </section>
 
-      <a id="form-vender"></a>
-	<section class="bg-magenta txt-light">
+   <a id="form-vender"></a>
+	<section id="section-contato-venda" class="row-blue txt-light" style="display: none;">
             <div class="pad-t-60 pad-b-60 pad-section-50"><br><br>
                <div class="container">
                   <div class="row v-align">
@@ -814,46 +836,46 @@
 				 <p class="txt-16">Cadastre-se agora e seja um dos primeiros a agarrar essa oportunidade!</p>
 				 <p class="txt-16 fw-600">FICOU INTERESSADO?</p>
 				 <div>
-					 <a href="javascript:void(0);" onclick="showFormContatoCorretor();" data-toggle="modal" class="btn btn-s btn-light" id="contato-corretor">SIM, QUERO ME CADASTRAR!</a>
+					 <a href="#" onclick="showFormContatoCorretor();" data-toggle="modal" class="btn-dark btn btn-s" id="contato-corretor">SIM, QUERO ME CADASTRAR!</a>
 				 </div>
 			  </div>
 		   </div>
 		</div>
 	 </section>
       <a id="form-corretor"></a>
-	 <section class="cover-bg overlay-dark txt-light">
+	 <section id="section-contato-corretor" class="cover-bg row-gray" style="display: none;">
             <div class="pad-t-60 pad-b-60 pad-section-50"><br><br>
                <div class="container">
                   <div class="row v-align">
                      <div class="col-md-10">
 						
-                        <form id="form-contato-corretor" class="contact-form-1" style="display: none;">
+                        <form id="form-contato-corretor" class="contact-form-5" style="display: none;">
 						   <h4 class="heading-des">Preencha o formulário abaixo</h4><br><br>
                            <div class="col-sm-12 no-pad">
                               <div class="messages"></div>
                            </div>
                            <div>
-							  <h3 class="text-uppercase">
+							  <h3 class="text-uppercase txt-black">
 							  <span class="sep-h-orange-dark"></span>
 							  seus dados</h3>
                               <div class="col-sm-12 no-pad">
                                  <div class="form-group">
-                                    <input type="text" class="form-control first-name" name="nomecorretor" id="nomeCorretor" placeholder="Nome Completo" required="required" data-error="Por gentileza, informe o Nome Completo">
+                                    <input type="text" class="myplaceholder form-control first-name" name="nomecorretor" id="nomeCorretor" placeholder="Nome Completo" required="required" data-error="Por gentileza, informe o Nome Completo">
                                  </div>
                               </div>
                               <div class="col-sm-4 no-pad">
                                  <div class="form-group">
-                                    <input type="email" class="form-control" name="emailcorretor" id="emailCorretor" placeholder="Email" required="required" data-error="Por gentileza, informe o Email">
+                                    <input type="email" class="myplaceholder form-control" name="emailcorretor" id="emailCorretor" placeholder="Email" required="required" data-error="Por gentileza, informe o Email">
                                  </div>
                               </div>
                               <div class="col-sm-4 no-pad">
                                  <div class="form-group">
-                                    <input type="text" class="form-control subject" name="celularcorretor" id="celularCorretor" placeholder="Celular" required="required" data-error="Por gentileza, informe o Celular de contato">
+                                    <input type="text" class="myplaceholder form-control subject" name="celularcorretor" id="celularCorretor" placeholder="Celular" required="required" data-error="Por gentileza, informe o Celular de contato">
                                  </div>
                               </div>
                               <div class="col-sm-4 no-pad">
                                    <div class="form-group">
-                                       <input type="text" class="form-control subject" name="creci" id="creci" placeholder="CRECI" required="required" data-error="Por gentileza, informe o CRECI">
+                                       <input type="text" class="myplaceholder form-control subject" name="creci" id="creci" placeholder="CRECI" required="required" data-error="Por gentileza, informe o CRECI">
                                    </div>
                               </div>
                               <div class="col-sm-12 pad-t-30" style="text-align: center">
@@ -864,14 +886,14 @@
 
                         <br class="clearfix" style="clear: both;">
 						   
-						<form id="form-corretor-detalhe" class="contact-form-1"  style="display: none;">
+						<form id="form-corretor-detalhe" class="contact-form-5"  style="display: none;">
 						   <div>
-							  <h3 class="text-uppercase">
+							  <h3 class="text-uppercase txt-black">
 							  <span class="sep-h-orange-dark"></span>
 							  fale-nos mais sobre sua atuação como corretor</h3>
 							  <div class="col-sm-12 no-pad">
                                  <div class="form-group">
-									 <fieldset class="fieldset1">
+									 <fieldset class="fieldset">
 										<legend>Sua especialidade:</legend>
 									 	<div class="radio">
 											<input type="radio" id="especialidade_1" name="especialidade" value="Apto"><label for="especialidade_1">Apartamento</label>
@@ -879,19 +901,19 @@
 											<input type="radio" id="especialidade_3" name="especialidade" value="Outro"><label for="especialidade_3">Outro</label>
 										</div>
 										<div class="form-group">
-											<input type="text" class="form-control first-name" style="border:0px;" name="outraEspecialidade" id="outraEspecialidade" placeholder="Em que outro tipo de imóvel é especialista?"  data-error="Por gentileza, informe que outro iipo de imóvel procura.">
+											<input type="text" class="myplaceholder form-control first-name" style="border:0px;" name="outraEspecialidade" id="outraEspecialidade" placeholder="Em que outro tipo de imóvel é especialista?"  data-error="Por gentileza, informe que outro iipo de imóvel procura.">
 										 </div>
 									</fieldset>
                                  </div>
                               </div>
 							  <div class="col-sm-6 no-pad">
                                  <div class="form-group">
-                                    <input type="text" class="form-control" name="cidadeEspecialidade" id="cidadeEspecialidade" placeholder="Cidade" required="required" data-error="Por gentileza, informe a Cidade">
+                                    <input type="text" class="myplaceholder form-control" name="cidadeEspecialidade" id="cidadeEspecialidade" placeholder="Cidade" required="required" data-error="Por gentileza, informe a Cidade">
                                  </div>
                               </div>
                               <div class="col-sm-6 no-pad">
                                  <div class="form-group">
-                                    <input type="text" class="form-control subject" name="bairroEspecialidade" id="bairroEspecialidade" placeholder="Bairros" required="required" data-error="Por gentileza, informe o Bairro">
+                                    <input type="text" class="myplaceholder form-control subject" name="bairroEspecialidade" id="bairroEspecialidade" placeholder="Bairros" required="required" data-error="Por gentileza, informe o Bairro">
                                  </div>
                               </div>
 
